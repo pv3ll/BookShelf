@@ -1,0 +1,31 @@
+"""
+@Created on: [10/23/2025]
+@Creators: [Pearl Vang, Madison Goulet, Saja Noor]
+@Course: INF 6050
+@University: Wayne State University
+@Assignment: [Group Project - Book Shelf]
+    
+@Python Version: 3.12.5 | packaged by Anaconda, Inc.  
+@Required Modules: []
+
+@Description: [A book shelf for users to add, edit, and delete their books by inputting the metadata for the book. This would be used for eBooks, physical books, audiobooks, and etc.]
+"""
+
+print("Welcome to the Book Shelf!\n")
+print("You can use this program to add, edit, or delete your books. It can be used eBooks, physical books, audiobooks, and anything else.\n")
+print("Please input the information about your book!")
+print("----"*5)
+
+#book questions formatted in a dictionary
+Book_q = {
+    "Title:" : " ",
+    "Author:" : " ",
+    "Year Published:" : " ",
+    "Genre:" : " ",
+    "Completion:": " "
+}
+
+for key in Book_q:
+    Book_q[key] = input(f"{key} ")
+for key, val in Book_q.items():
+    print(f"{key} {val}")
