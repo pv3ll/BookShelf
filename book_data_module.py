@@ -11,7 +11,8 @@ book_data.py
 @Python Version: 3.9x
 @Required Modules: json, os, csv
 
-@Description: Module that handles all data storage, retrieval, and manipulation for the BookShelf application.
+@Description: Module that handles all data storage, retrieval, and manipulation 
+for the BookShelf application.
 
 """
 import json
@@ -20,11 +21,13 @@ import csv
 
 #File Handling with JSON
 #loading the re-existing bookshelf json file 
-#(opens json file already created by application or starts the user with an empty bookshelf)
+#(opens json file already created by application or starts the user with an
+#empty bookshelf)
 #(Returns a list of book dictionaries)
 def load_books(filename='books.json'):
     if not os.path.exists(filename):
-        print(f"File '{filename}' not found. You are starting with an empty bookshelf.")
+        print(f"File '{filename}' not found. You are starting with an empty "
+              f"bookshelf.")
         return []
     try:
         with open(filename, 'r', encoding='utf-8') as file:
@@ -36,7 +39,8 @@ def load_books(filename='books.json'):
   
 #saving updated bookshelf json file
 #(adds new entries or updated existings one and saves to json file)
-#(to be called at the end of the main script to save user data for next session)
+#(to be called at the end of the main script to save user data for next
+#session)
 def save_books(books, filename='books.json'):
     try:
         with open(filename, 'w', encoding='utf-8') as file:
@@ -47,9 +51,11 @@ def save_books(books, filename='books.json'):
     
 #Book Management Functions 
 #adding a new book to bookshelf
-#(only updates the in-memory list, must use save_books() after to make changes permanent)
+#(only updates the in-memory list, must use save_books() after to make changes
+#permanent)
 #(user input and prompts for book details will go in main script)
-def add_book(books, title, author, year, form, status='Not Started', rating=None, notes=None): 
+def add_book(books, title, author, year, form, status='Not Started', 
+             rating=None, notes=None): 
     new_book = {
        'title': title, 
        'author': author,
@@ -64,7 +70,8 @@ def add_book(books, title, author, year, form, status='Not Started', rating=None
     return books 
     
 #updating an existing book on bookshelf
-#(only updates the in-memory list, must use save_books() after to make changes permanent)
+#(only updates the in-memory list, must use save_books() after to make changes 
+#permanent)
 #(user input and prompts for book details will go in main script)
 def update_book(books, title, updated_info):
     for book in books:
@@ -77,7 +84,8 @@ def update_book(books, title, updated_info):
     
     
 #removing a book from bookshelf
-#(only updates the in-memory list, must use save_books() after to make changes permanent)
+#(only updates the in-memory list, must use save_books() after to make changes
+#permanent)
 #(user input and prompts for book details will go in main script)
 def remove_book(books, title):
     for book in books:
@@ -90,7 +98,8 @@ def remove_book(books, title):
 
 #Display & Export Functions
 #displaying books in table-like format in console
-#(shows in Python all current books on bookshelf, quick and easy way to see bookshelf)
+#(shows in Python all current books on bookshelf, quick and easy way to see
+#bookshelf)
 #(':number' is the spacing of the table)
 def display_books(books):
     if not books:
