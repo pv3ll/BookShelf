@@ -10,7 +10,9 @@
 
 @Description: [A book shelf for users to add, edit, and delete their books by inputting the metadata for the book. This would be used for eBooks, physical books, audiobooks, and etc.]
 """
-
+#####
+Introduction to the program and what it does
+#####
 print("Welcome to the Book Shelf!\n")
 print("You can use this program to add, edit, or delete your books. It can be used eBooks, physical books, audiobooks, and anything else.\n")
 print("Please input the information about your book!")
