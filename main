@@ -18,17 +18,17 @@ print("Please input the information about your book!")
 print("----"*5)
 
 #book questions formatted in a dictionary
-Book_q = {
-    "Title:" : " ",
-    "Author:" : " ",
-    "Year Published:" : " ",
-    "Genre:" : " ",
-    "Completion:": " "
+Book_entry = {
+    "Title" : " ",
+    "Author" : " ",
+    "Year Published" : " ",
+    "Genre" : " ",
+    "Completion": " "
 }
 
-for key in Book_q:
-    Book_q[key] = input(f"{key} ")
-for key, val in Book_q.items():
+for key in Book_entry:
+    Book_entry[key] = input(f"{key}:")
+for key, val in Book_entry.items():
     print(f"{key} {val}")
 
 #Ending of program prompt
