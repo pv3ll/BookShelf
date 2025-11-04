@@ -17,6 +17,16 @@ print("You can use this program to add, edit, or delete your books. It can be us
 print("Please input the information about your book!")
 print("----"*5)
 
+#Show total number of books
+def totalBooks(): 
+    for entry in totalBooks:
+        if Book_entryook_entry in totalBooks: 
+            totalBooks + 1
+        elif book_delete in totalBooks: 
+            totalBooks - 1
+        else:
+            print("You have", totalBooks, "in your collection")
+
 #book questions formatted in a dictionary
 Book_entry = {
     "Title" : " ",
