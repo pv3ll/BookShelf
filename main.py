@@ -20,7 +20,7 @@ print("----"*5)
 #Show total number of books
 def totalBooks(): 
     for entry in totalBooks:
-        if Book_entry in totalBooks: 
+        if new_book in totalBooks: 
             totalBooks + 1
         elif book_delete in totalBooks: 
             totalBooks - 1
@@ -28,7 +28,7 @@ def totalBooks():
             print("You have", totalBooks, "in your collection")
 
 #book questions formatted in a dictionary
-Book_entry = {
+new_book = {
     "Title" : " ",
     "Author" : " ",
     "Year Published" : " ",
@@ -36,9 +36,9 @@ Book_entry = {
     "Completion": " "
 }
 
-for key in Book_entry:
-    Book_entry[key] = input(f"{key}:")
-for key, val in Book_entry.items():
+for key in new_book:
+    new_book[key] = input(f"{key}:")
+for key, val in new_book.items():
     print(f"{key} {val}")
 
 #Ending of program prompt
