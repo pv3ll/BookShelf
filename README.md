@@ -1,6 +1,7 @@
 # BookShelf
 Bookshelf
-6050 project
+6050 Group Project
+Contributors: Madison Goulet, Pearl Vang, and Saja Noor
 
-Common modules:
-csv
+Modules Used: 
+
