@@ -20,7 +20,7 @@ print("----"*5)
 #Show total number of books
 def totalBooks(): 
     for entry in totalBooks:
-        if Book_entryook_entry in totalBooks: 
+        if Book_entry in totalBooks: 
             totalBooks + 1
         elif book_delete in totalBooks: 
             totalBooks - 1
