@@ -4,4 +4,7 @@ Bookshelf
 Contributors: Madison Goulet, Pearl Vang, and Saja Noor
 
 Modules Used: 
-
+os
+csv
+json
+sys
