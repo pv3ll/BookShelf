@@ -11,9 +11,13 @@
  
 @Description: [A book shelf for users to add, edit, and delete their books by inputting the metadata for the book. This would be used for eBooks, physical books, audiobooks, and etc.]
 """
+import book_data #group-created function module
+
 #section divider
 def newline():
     print("-" * 25)
+#Load bookshelf on program startup
+books = book_data.load_books()
 
 #Introduction to the program
 
@@ -161,4 +165,5 @@ while True:
         book_data.save_books(books)
         print("\nYour BookShelf is safe. Goodbye!\n")
         break
+
 
