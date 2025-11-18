@@ -80,5 +80,85 @@ print("To View your collection, choose 6 or X.\n\tThis will export your collecti
 newline()
 print("To quit the program, press Q")
 
+#Menu Loop
+while True: 
+    print("Main Menu:")
+    print("1. (A)dd a Book")
+    print("2. (R)emove a Book")
+    print("3. (U)pdate a Book")
+    print("4. (F)ind a Book")
+    print("5. (S)ave your Collection")
+    print("6. (V)iew your Collection")
+    print("7. E(X)port to CSV")
+    print("(Q)uit")
 
+    choice = input("\nMake a selection: ").strip().lower()
+    newline()
+
+#Add a book function
+    if choice in ("1", "a"):
+        print("Add a New Book:\n")
+        
+        title = input("Title: ").strip()
+        author = input("Author: ").strip()
+        genre = input("Genre: ").strip()
+        year = input("Publication Year: ").strip()
+        form = input("Form (Physical / eBook / Audiobook): ").strip()
+        status = input("Status (Completed / In Progress / TBR): ").strip()
+        
+        rating_input = input("Rating (1-5, optional)").strip()
+        rating = rating_input if rating_input else None
+        
+        notes_input = input("Notes (optional): ").strip()
+        notes = notes_input if notes_input else None
+    
+        book_data.add_book(books, title, author, genre, year, form, status, rating, notes)
+    
+        newline()
+
+    #Remove a book function
+    elif choice in ("2", "r"):
+        print("Remove a Book:\n")
+        title = input("Enter the title of the book you would like to remove: ").strip()
+        
+        book_data.remove_book(books, title)
+        
+        newline()
+    
+    #Update a book function
+    elif choice in ("3","u"):
+        print("Update a Book:\n")
+        title = input("Enter the title of the book you would like to update: ").strip()
+        
+        print("\nEnter the new values below. Press Enter to keep the current value.\n")
+        
+        updated_info = {}
+        for field in ["author", "genre", "year", "form", "status", "rating", "notes"]:
+            new_value = input(f"New {field.capitalize()}: ").strip()
+            if new_value:
+                updated_info[field] = new_value
+        
+        book_data.update_book(books, title, updated_info)
+        
+        newline()
+        
+    #Find a book function (this function is not in the module -- add it? )
+    elif choice in ("4", "f"):
+ 
+               
+    #Save collection function (needs function added)
+    elif choice in ("5", "s"):
+        
+    #View collection in Python window function (needs function added)
+    elif choice in ("6", "v"):
+    
+    #Export collection to CSV file function (needs function added)
+    elif choice in ("7", "x"):
+    
+    #Quit function
+    elif choice == "q":
+        print ("Saving your BookShelf before exit...")
+        book_data.save_books(books)
+        print("\nYour BookShelf is safe. Goodbye!\n")
+        break
 
