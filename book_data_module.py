@@ -130,3 +130,10 @@ def export_to_csv(books, filename='bookshelf.csv'):
         print(f"Bookshelf successfully exported to '{filename}.'")
     except Exception as e:
         print(f'Error exporting to CSV: {e}')
+# finding a book on the bookshelf (an attempt was made -Saja)
+def find_books(books, title):
+    search_for = input("Which book title would you like to search for?: ")
+    for search_for in books:
+        print(list(filter(lambda x:x["title"]==search_for, books)))
+    if search_for not in books:
+        print(search_for, "is not a title present on your bookshelf.")
