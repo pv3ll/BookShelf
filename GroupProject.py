@@ -146,24 +146,38 @@ while True:
         
         newline()
         
-    #Find a book function (this function is not in the module -- add it? )
+    #Find a book function (attempted to add function to module -Saja)
     elif choice in ("4", "f"):
- 
-               
-    #Save collection function (needs function added)
+        book_data.find_books(books)
+        continue
+    #Save collection function
     elif choice in ("5", "s"):
-        
-    #View collection in Python window function (needs function added)
-    elif choice in ("6", "v"):
-    
-    #Export collection to CSV file function (needs function added)
-    elif choice in ("7", "x"):
-    
-    #Quit function
-    elif choice == "q":
-        print ("Saving your BookShelf before exit...")
+        print("Saving your Bookshelf...")
         book_data.save_books(books)
-        print("\nYour BookShelf is safe. Goodbye!\n")
-        break
+        print("Your Bookshelf has been saved.")
+        continue
+    #View collection in Python window function
+    elif choice in ("6", "v"):
+        print("Here is your current Bookshelf:")
+        book_data.display_books(books)
+        continue
+    #Export collection to CSV file function
+    elif choice in ("7", "x"):
+        print("Exporting your Bookshelf...")
+        book_data.export_to_csv(books)
+        continue
+    #Quit function (built into this file but can be moved to module -Saja)
+    elif choice == "Q":
+        saveQuit = input("Would you like to save your Bookshelf before "
+                         "quitting? Type Y to save or Q to quit: ")
+        if saveQuit == "Y":
+            book_data.save_books(books)
+            print("\nYour BookShelf is safe.\n")
+            quitShelf()
+            break
+        elif saveQuit == "Q":
+            quitShelf()
+            break
+
 
 
