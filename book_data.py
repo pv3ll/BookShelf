@@ -28,14 +28,14 @@ def load_books(filename='books.json'):
     if not os.path.exists(filename):
         print(f"File '{filename}' not found. You are starting with an empty "
               f"bookshelf.")
+        try:
+            with open("books.json", 'w', encoding='utf-8') as file:
+                books = json.load(file)
+                print(f"Successfully loaded {len(books)} books from '{filename}.'")
+                return books
+        except Exception as e:
+            print(F'Unexpected error loading file: {e}')
         return []
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            books = json.load(file)
-            print(f"Successfully loaded {len(books)} books from '{filename}.'")
-            return books
-    except Exception as e:
-        print(F'Unexpected error loading file: {e}')
   
 #saving updated bookshelf json file
 #(adds new entries or updated existings one and saves to json file)
@@ -54,19 +54,12 @@ def save_books(books, filename='books.json'):
 #(only updates the in-memory list, must use save_books() after to make changes
 #permanent)
 #(user input and prompts for book details will go in main script)
-def add_book(books, title, author, year, form, status='Not Started', 
-             rating=None, notes=None): 
-    new_book = {
-       'title': title, 
-       'author': author,
-       'year': year, 
-       'form': form, 
-       'status': status, 
-       'rating': rating, 
-       'notes': notes
-        }
-    books.append(new_book)
-    print(F"Successfully added '{title} by {author}.")
+def add_book(new_book, filename = "books.json"):
+    with open(filename, 'r+', encoding='utf-8') as file:
+        books = json.load(file)
+        books["book_details"].append(new_book)
+        file.seek(0)
+        json.dump(books, file, indent=4)
     return books 
     
 #updating an existing book on bookshelf
@@ -130,6 +123,7 @@ def export_to_csv(books, filename='bookshelf.csv'):
         print(f"Bookshelf successfully exported to '{filename}.'")
     except Exception as e:
         print(f'Error exporting to CSV: {e}')
+        
 # finding a book on the bookshelf (an attempt was made -Saja)
 def find_books(books, title):
     search_for = input("Which book title would you like to search for?: ")
