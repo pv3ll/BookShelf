@@ -32,9 +32,8 @@ print("You can use this program to add, edit, or delete your books. It can be"
       " used eBooks, physical books, audiobooks, and anything else.")
 newline()
 
-#Loading JSON file
+#Filename definition 
 filename = "books.json"
-book_data.load_books(filename)
 
 #This line of code gives users the option to see the instructions or skip it
 choice = input("Would you like instructions? Y/N: ").strip().lower()
@@ -104,51 +103,42 @@ while True:
     print("6. (V)iew your Collection")
     print("7. E(X)port to CSV")
     print("(Q)uit")
-    choice = input("\nMake a selection: ").strip().lower()
-    newline()
+    choice = input("\nMake a selection:\n ").strip().lower()
+
     
     #Add a book function
     if choice in ("1", "a"):
-        print("Add a New Book:\n")
+        print("\nAdd a New Book\n")
         book_data.add_book(filename)
-        print("Your book was successfully added.")
         newline()
         
     #Remove a book function
     elif choice in ("2", "r"):
-        print("Remove a Book:\n")
+        print("Remove a Book\n")
         title = input("Enter the title of the book you would like to"
                       " remove: ").strip()
-        book_data.remove_book(filename)
+        book_data.remove_book(filename, title)
         newline()
         
     #Update a book function
     elif choice in ("3","u"):
-        print("Update a Book:\n")
-        title = input("Enter the title of the book you would like to "
-                      "update: ").strip()
-        print("\nEnter the new values below. Press Enter to keep the current "
-              "value.\n")
-        updated_info = {}
-        for field in ["author", "genre", "year", "form", "status", "rating", 
-                      "notes"]:
-            new_value = input(f"New {field.capitalize()}: ").strip()
-            if new_value:
-                updated_info[field] = new_value
-        book_data.update_book(title, updated_info)
+        print("Update a Book\n")
+        title = input("Enter the title of the book you want "
+                      "to update: ").strip()
+        book_data.update_book(filename, title)
         newline()
         
     #Find a book function (attempted to add function to module -Saja)
     elif choice in ("4", "f"):
+        print("Find a Book\n")
         book_data.find_books()
         continue
     
     #Save collection function
     elif choice in ("5", "s"):
         print("Saving your Bookshelf...")
-        book_data.save_books()
-        print("Your Bookshelf has been saved.")
-        continue
+        book_data.save_books(filename)
+        newline()
     
     #View collection in Python window function
     elif choice in ("6", "v"):
@@ -174,3 +164,4 @@ while True:
         elif saveQuit == "Q":
             quitShelf()
             break
+
