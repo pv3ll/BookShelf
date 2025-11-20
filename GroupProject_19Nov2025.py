@@ -31,6 +31,11 @@ print("Welcome to the Book Shelf!\n")
 print("You can use this program to add, edit, or delete your books. It can be"
       " used eBooks, physical books, audiobooks, and anything else.")
 newline()
+
+#Loading JSON file
+filename = "books.json"
+book_data.load_books(filename)
+
 #This line of code gives users the option to see the instructions or skip it
 choice = input("Would you like instructions? Y/N: ").strip().lower()
 while choice not in ("y","n"):
@@ -86,6 +91,8 @@ print("To View your collection, choose 6 or X.\n\tThis will export your"
       " collection into a JSON file, with an option to view it as a CSV file.")
 newline()
 print("To quit the program, press Q")
+
+
 #Menu Loop
 while True: 
     print("Main Menu:")
@@ -99,36 +106,24 @@ while True:
     print("(Q)uit")
     choice = input("\nMake a selection: ").strip().lower()
     newline()
-#Add a book function
+    
+    #Add a book function
     if choice in ("1", "a"):
         print("Add a New Book:\n")
-        with open("books.json", "r"):
-            new_book = {
-                "title" : input("Title: ").strip(),
-                "author" : input("Author: ").strip(),
-                "genre" : input("Genre: ").strip(),
-                "year" : input("Publication Year: ").strip(),
-                "form" : input("Form (Physical / eBook / Audiobook): ").strip(),
-                "status" : input("Status (Completed / In Progress / TBR): ").strip(),
-                "rating" : input("Rating (1-5, optional): ").strip(),
-                "notes" : input("Notes (optional): ").strip()
-                }
-            book_data.add_book(new_book)
+        book_data.add_book(filename)
         print("Your book was successfully added.")
         newline()
+        
     #Remove a book function
     elif choice in ("2", "r"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         print("Remove a Book:\n")
         title = input("Enter the title of the book you would like to"
                       " remove: ").strip()
-        book_data.remove_book(title)
+        book_data.remove_book(filename)
         newline()
+        
     #Update a book function
     elif choice in ("3","u"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         print("Update a Book:\n")
         title = input("Enter the title of the book you would like to "
                       "update: ").strip()
@@ -142,38 +137,33 @@ while True:
                 updated_info[field] = new_value
         book_data.update_book(title, updated_info)
         newline()
+        
     #Find a book function (attempted to add function to module -Saja)
     elif choice in ("4", "f"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         book_data.find_books()
         continue
+    
     #Save collection function
     elif choice in ("5", "s"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         print("Saving your Bookshelf...")
         book_data.save_books()
         print("Your Bookshelf has been saved.")
         continue
+    
     #View collection in Python window function
     elif choice in ("6", "v"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         print("Here is your current Bookshelf:")
         book_data.display_books()
         continue
+    
     #Export collection to CSV file function
     elif choice in ("7", "x"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         print("Exporting your Bookshelf...")
         book_data.export_to_csv()
         continue
+    
     #Quit function (built into this file but can be moved to module -Saja)
     elif choice == ("Q"):
-        #Load bookshelf on program startup
-        book_data.load_books()
         saveQuit = input("Would you like to save your Bookshelf before "
                          "quitting? Type Y to save or Q to quit: ")
         if saveQuit == "Y":
