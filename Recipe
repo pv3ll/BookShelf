@@ -1,0 +1,16 @@
+# BookShelf
+Bookshelf
+6050 Group Project
+Contributors: Madison Goulet, Pearl Vang, and Saja Noor
+
+First, import book_data module and sys module
+  book_data module is used for add, remove, update, and find option 
+  sys module used for quit function using "q" or "quit"
+
+Second, create user-defined functions to create section dividers, quit option, and instructions 
+  Section divider uses Newline(): print("-" *25)
+  Quit option uses quitShelf()
+  Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like. 
+
+Third, introduction into the program with a summary of what the program can do. 
+  Create a variable to define filename into books.json
