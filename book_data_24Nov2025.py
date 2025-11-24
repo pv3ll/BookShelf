@@ -159,7 +159,8 @@ def find_books(filename, title):
 def display_books(filename):
     if not filename:
         print('No books to display.')
-        return 
+        return
+    books = load_books(filename) #calling the load_book function 
     print('Your Bookshelf')
     print('--'*40)
     print(f"{'Title':30} | {'Author':20} | {'Status':15} | {'Rating':6}")
