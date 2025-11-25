@@ -104,8 +104,9 @@ def update_book(filename, title):
 
     for field in ["author", "genre", "year", "form", "status", "rating",
                   "notes"]:
-        new_value = input(f"New {field.capitalize()} "
-                          "(current: '{book.get(field, '')}'): ").strip()
+        new_value = input(
+            f"New {field.capitalize()}(current: '{book.get(field, '')}'): "
+        ).strip()
         if new_value:
             book[field] = new_value
    
@@ -142,33 +143,44 @@ def remove_book(filename, title):
         return False
 
 #Finding a book on bookshelf (view-only function)
-# finding a book on the bookshelf (an attempt was made -Saja)
-def find_books(filename, title):
-    books = load_books(filename) #calling the load_book function 
-    #Find the book by title 
-    book_title = input("Which book title would you like to search for?: ")
+def find_book(filename, title):
+    books = load_books(filename) #callling the load_book function
+    
+    #Find book by title
+    matched_title = None
     for book_title in books:
         if book_title.lower() == title.lower():
             matched_title = book_title
-            if matched_title in books:
-                print(list(filter(lambda x:x["title"]==book_title, books)))
-            else:
-                print(book_title, "is not a title present on your bookshelf.")
+            break
+
+    if matched_title is None:
+        print(f"Book titled '{title}' not found.\n")
+        return False
+    
+    #Retrieve and display book dictionary
+    book = books[matched_title]
+    
+    print(f"\n Book Found: {matched_title}\n")
+    for field, value in book.items():
+        print(f"{field.capitalize()}: {value}")
+        print("-" * 25)
+
 #Display & Export Functions
 #displaying books in table-like format in console (NEEDS REWORKING)
 def display_books(filename):
     if not filename:
         print('No books to display.')
         return
+    
     books = load_books(filename) #calling the load_book function 
     print('Your Bookshelf')
     print('--'*40)
     print(f"{'Title':30} | {'Author':20} | {'Status':15} | {'Rating':6}")
     print('--'*40)
-    for book in filename:
-        rating = book['rating'] if book['rating'] is not None else '-'
-        print(f"{book['title'][:30]:30} | {book['author'][:20]:20} | "
-              f"{book['status'][:15]:15} | {str(rating):6}")
+    for books in filename:
+        rating = books['rating'] if books['rating'] is not None else '-'
+        print(f"{books['title'][:30]:30} | {books['author'][:20]:20} | "
+              f"{books['status'][:15]:15} | {str(rating):6}")
         print('--'*40)
     
 #exporting current bookshelf to CSV file for Excel-style viewing
