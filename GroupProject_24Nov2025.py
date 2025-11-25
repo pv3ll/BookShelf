@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 @Created on: [10/23/2025]
 @Creators: [Pearl Vang, Madison Goulet, Saja Noor]
@@ -110,7 +108,6 @@ while True:
     print("(Q)uit")
     choice = input("\nMake a selection:\n ").strip().lower()
 
-    
     #Add a book function
     if choice in ("1", "a"):
         print("\nAdd a New Book\n")
@@ -171,3 +168,4 @@ while True:
         elif saveQuit == "Q":
             quitShelf()
             break
+
