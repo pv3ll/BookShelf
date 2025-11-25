@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 @Created on: [10/23/2025]
 @Creators: [Pearl Vang, Madison Goulet, Saja Noor]
@@ -131,11 +133,13 @@ while True:
         book_data.update_book(filename, title)
         newline()
         
-    #Find a book function (attempted to add function to module -Saja)
+    #Find a book function
     elif choice in ("4", "f"):
         print("Find a Book\n")
-        book_data.find_books()
-        continue
+        title = input("Enter the title of the book you want "
+                      "to find: ").strip()
+        book_data.find_book(filename, title)
+        newline()
     
     #Save collection function
     elif choice in ("5", "s"):
@@ -167,4 +171,3 @@ while True:
         elif saveQuit == "Q":
             quitShelf()
             break
-
