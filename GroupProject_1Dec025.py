@@ -14,18 +14,10 @@
                eBooks, physical books, audiobooks, and etc.]
 """
 import book_data #group-created function module
-import sys 
+
 #section divider
 def newline():
-    print("-" * 25)
-#  With this user-defined function, when the user decides to quit the program 
-#  will run the following lines of code to output a goodbye message and end the
-#  program.
-def quitShelf():
-    print("\n")
-    print("See you next time!")
-    print("\n")
-    sys.exit("Quitting program...")
+    print("-" * 40)
     
 #With this user-defined function, the user will be able to view the instructions
 #when the choose the option "y" or "yes"
@@ -147,8 +139,8 @@ while True:
     #View collection in Python window function
     elif choice in ("6", "v"):
         print("Here is your current Bookshelf:")
-        book_data.display_books()
-        continue
+        book_data.view_books(filename)
+        newline()
     
     #Export collection to CSV file function
     elif choice in ("7", "x"):
@@ -156,16 +148,17 @@ while True:
         book_data.export_to_csv()
         continue
     
-    #Quit function (built into this file but can be moved to module -Saja)
-    elif choice == ("Q"):
-        saveQuit = input("Would you like to save your Bookshelf before "
-                         "quitting? Type Y to save or Q to quit: ")
-        if saveQuit == "Y":
-            book_data.save_books()
+    #Quit the shelf (and save option)
+    elif choice == "q":
+        save_quit = input("Would you like to save your Bookshelf before "
+                         "quitting? (Y/N): ").strip().lower()
+        if save_quit == "y":
+            book_data.save_books(filename)
             print("\nYour BookShelf is safe.\n")
-            quitShelf()
+            book_data.quit_shelf()
             break
-        elif saveQuit == "Q":
-            quitShelf()
+        elif save_quit == "n":
+            book_data.quit_shelf()
             break
-
+        else: 
+            print("Invalid input. Please enter Y or N.\n")
