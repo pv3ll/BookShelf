@@ -3,20 +3,20 @@ Bookshelf
 6050 Group Project
 Contributors: Madison Goulet, Pearl Vang, and Saja Noor
 
-First, import book_data module and sys module
-  book_data module is used for add, remove, update, and find option 
-  sys module used for quit function using "q" or "quit"
+Import book_data module
+  book_data module is used for add, remove, update, and find option
+  It also includes the quit function
 
-Second, create user-defined functions to create section dividers, quit option, and instructions 
-  Section divider uses Newline(): print("-" *25)
-  Quit option uses quitShelf()
-  Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like. 
+Create user-defined functions to create section dividers, quit option, and instructions 
+  Section divider uses Newline(): print("-" * 40)
+  Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like.
+    - 
 
 Third, introduction into the program with a summary of what the program can do. 
-  Create a variable to define filename into books.json
+Create a variable to define filename into books.json
   This is so users can view their bookshelf in json format in the program
   Export option is so users can export thier bookshelf into csv
-  Create a choice input option for users to view the instructions or go straight to the Main Menu
+Create a choice input option for users to view the instructions or go straight to the Main Menu
     Use while loop for users choose Y or N
       Y means yes:
         Y should print the user function "instructions" 
@@ -32,6 +32,7 @@ In the main menu, include the options in a while loop:
     "V" and "6" = View your Collection 
     "X" and "7" = Export to CSV
     "Q" = Quit
+    Make sure uppercase and lowercase can both be used as input using strip().lower()
 Create input statement for user to make a selection from the following
 Adding a book should include these elements: 
 Title
@@ -43,18 +44,21 @@ Status
 Rating
 Notes
 
-Remove a book by recalling its title
+Remove a book by recalling its title.
+
 Update a book by recalling its title first, users will be able to edit the above elements(except title) or skip them by pressing "enter" on their keyboard. The current information will be in parantheses
 for users to know what the original information was before editing it.
-Find a book by recalling its title
-Save the collection to books.json
-View your collection in json format
-Export your collection to CSV format
 
-Use sys for quit option
+Find a book by recalling its title.
 
-Create functions using the book_data module in the while loop
+Save the collection to books.json.
 
-The main menu loop should keep happening unless the user chooses quit
+View your collection in json format.
+
+Export your collection to CSV format.
+
+Create functions using the book_data module in the while loop.
+  Use if:elif:else in the same order from line 27 to line 34. 
+The main menu loop should keep happening unless the user chooses quit.
   
       
