@@ -169,21 +169,23 @@ def view_books(filename):
 #(creates or replaces 'bookshelf.csv' to this new version) (NEEDS REWORKING)
 def export_to_csv(filename='bookshelf.csv'):
     try:
+        #load json file
         with open("books.json") as jf:
             jsonDump = json.load(jf)
-        df = open("books.csv", 'w', newline='')
-        cw = csv.writer(df)
-        c = 0
-        for data in jsonDump:
-            if c == 0:
-                header = data.keys()
-                cw.writerow(header)
-                c += 1
-            cw.writerow(data.values())
-        df.close()
-        print(f"Bookshelf successfully exported to '{filename}.'")
+        #convert list to rows
+        if isinstance(jsonDump, dict):
+            jsonDump = list(jsonDump.values())
+        with open(filename, 'w', newline='', encoding='utf-8') as df:
+            cw = csv.writer(df)
+            #write a header
+            header = list(jsonDump[0].keys())
+            cw.writerow(header)
+            #write rows
+            for record in jsonDump:
+                cw.writerow([record.get(h, "") for h in header])
+        print(f"Bookshelf successfully exported to '{filename}'.")
     except Exception as e:
-        print(f'Error exporting to CSV: {e}')
+        print(f"Error exporting to CSV: {e}")
         
 #QUIT program function (quit logic in module)
 def quit_shelf():
