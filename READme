@@ -8,21 +8,21 @@ These are the menu options:
 5. Save your collection
 6. View your collection
 7. Export your collection into a CSV File
-print("\nMain Options:\nAdd a Book: You can add a book by choosing 1 or A.\n")
-    print("\tHow to add a book:")
-    howto_book_entry = { 
-        "Author" : "Enter author name",
-        "Genre" : "Enter genre of the book(Fantasy, Fiction, NonFic, etc.)",
-        "Year" : "Enter published year", 
-        "Form" : "Enter format of the book(Audiobook, Physical, eBook, etc.)", 
-        "Status" : "Enter state of completion(Completed, TBR, etc.)", 
-        "Rating" : "Rate book on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
-        "Notes" : "Comments or reminders about the book"}   
-    for (key,val) in howto_book_entry.items():
-       print("\t", key,":", val)
-    newline()
+-------------------
+To add a book, choose 1 or A.
+
+The below prompt shows what users need to know in order to add a book. Entries can be left blank by pressing ENTER.  
+Title:         
+Author : "Enter author name",
+Genre" : "Enter genre of the book(Fantasy, Fiction, NonFic, etc.)",
+"Year" : "Enter published year", 
+"Form" : "Enter format of the book(Audiobook, Physical, eBook, etc.)", 
+"Status" : "Enter state of completion(Completed, TBR, etc.)", 
+"Rating" : "Rate book on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
+"Notes" : "Comments or reminders about the book"}   
+
     #How to remove a book
-    print("To remove a book, choose 2 or R.")
+To remove a book, choose 2 or R.
     print("\tTo remove a book, enter the title of the book.\n")
     newline()
     #How to update a book
@@ -31,10 +31,10 @@ print("\nMain Options:\nAdd a Book: You can add a book by choosing 1 or A.\n")
           " needed fields. Example:")
     example_update = {
         "New Author(current: )" : "Enter new author name",
-        "New Genre(current: )" : "Enter  new genre of the book(Fantasy, Fiction, NonFic, etc.)",
-        "New Year(current: )" : "Enter  new published year", 
-        "New Form(current: )" : "Enter  new format of the book(Audiobook, Physical, eBook, etc.)", 
-        "New Status(current: )" : "Enter  new state of completion(Completed, TBR, etc.)", 
+        "New Genre(current: )" : "Enter new genre of the book(Fantasy, Fiction, NonFic, etc.)",
+        "New Year(current: )" : "Enter new published year", 
+        "New Form(current: )" : "Enter new format of the book(Audiobook, Physical, eBook, etc.)", 
+        "New Status(current: )" : "Enter new state of completion(Completed, TBR, etc.)", 
         "New Rating(current: )" : "New book rating on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
         "New Notes(current: )" : "New comments or reminders about the book"}
     for (key,val) in example_update.items():
@@ -48,7 +48,7 @@ print("\nMain Options:\nAdd a Book: You can add a book by choosing 1 or A.\n")
     print("To Find a Book in your collection, choose 4 or F.\n\tTo find the book,"
           " enter the title.\n")
     print("To save your collection to the most recent, choose 5 or S.\n")
-    print("To View your collection, choose 6 or X.\n\tThis will export your"
-          " collection into a JSON file, with an option to view it as a CSV file.")
+    print("To View your collection, choose 6 or V.\n")
+    print("To export your collection into a CSV file, choose 7 or X.\n")
     newline()
-    print("To quit the program, press Q")
+    print("To quit the program, press Q.")
