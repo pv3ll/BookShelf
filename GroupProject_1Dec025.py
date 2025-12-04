@@ -25,15 +25,14 @@ def instructions():
     #How to add a book
     print("\nMain Options:\nAdd a Book: You can add a book by choosing 1 or A.\n")
     print("\tHow to add a book:")
-    howto_book_entry = {
-       "Title" : "Enter title of the book", 
-        "Author" : "Enter author name",
-        "Genre" : "Enter genre of the book(Fantasy, Fiction, NonFic, etc.)",
-        "Year" : "Enter published year", 
-        "Form" : "Enter format of the book(Audiobook, Physical, eBook, etc.)", 
-        "Status" : "Enter state of completion(Completed, TBR, etc.)", 
-        "Rating" : "Rate the book on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
-        "Notes" : "Enter any comments or reminders about the book"}   
+    howto_book_entry = { 
+        "New Author(current: )" : "Enter new author name",
+        "New Genre(current: )" : "Enter  new genre of the book(Fantasy, Fiction, NonFic, etc.)",
+        "New Year(current: )" : "Enter  new published year", 
+        "New Form(current: )" : "Enter  new format of the book(Audiobook, Physical, eBook, etc.)", 
+        "New Status(current: )" : "Enter  new state of completion(Completed, TBR, etc.)", 
+        "New Rating(current: )" : "New book rating on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
+        "New Notes(current: )" : "New comments or reminders about the book"}   
     for (key,val) in howto_book_entry.items():
        print("\t", key,":", val)
     newline()
@@ -162,3 +161,4 @@ while True:
             break
         else: 
             print("Invalid input. Please enter Y or N.\n")
+
