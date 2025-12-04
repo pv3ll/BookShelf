@@ -26,6 +26,7 @@ def instructions():
     print("\nMain Options:\nAdd a Book: You can add a book by choosing 1 or A.\n")
     print("\tHow to add a book:")
     howto_book_entry = { 
+        "Title" : "Enter Book Title",
         "Author" : "Enter author name",
         "Genre" : "Enter genre of the book(Fantasy, Fiction, NonFic, etc.)",
         "Year" : "Enter published year", 
@@ -160,6 +161,7 @@ while True:
             break
         else: 
             print("Invalid input. Please enter Y or N.\n")
+
 
 
 
