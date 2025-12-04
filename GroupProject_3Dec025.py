@@ -46,10 +46,10 @@ def instructions():
           " needed fields. Example:")
     example_update = {
         "New Author(current: )" : "Enter new author name",
-        "New Genre(current: )" : "Enter  new genre of the book(Fantasy, Fiction, NonFic, etc.)",
-        "New Year(current: )" : "Enter  new published year", 
-        "New Form(current: )" : "Enter  new format of the book(Audiobook, Physical, eBook, etc.)", 
-        "New Status(current: )" : "Enter  new state of completion(Completed, TBR, etc.)", 
+        "New Genre(current: )" : "Enter new genre of the book(Fantasy, Fiction, NonFic, etc.)",
+        "New Year(current: )" : "Enter new published year", 
+        "New Form(current: )" : "Enter new format of the book(Audiobook, Physical, eBook, etc.)", 
+        "New Status(current: )" : "Enter new state of completion(Completed, TBR, etc.)", 
         "New Rating(current: )" : "New book rating on a scale of 1 to 5(1 = Bad, 5 = Awesome)", 
         "New Notes(current: )" : "New comments or reminders about the book"}
     for (key,val) in example_update.items():
@@ -71,7 +71,7 @@ def instructions():
 #Introduction to the program
 print("Welcome to the Book Shelf!\n")
 print("You can use this program to add, edit, or delete your books. It can be"
-      " used eBooks, physical books, audiobooks, and anything else.")
+      "used eBooks, physical books, audiobooks, and anything else.")
 newline()
 
 #Filename definition 
@@ -160,6 +160,7 @@ while True:
             break
         else: 
             print("Invalid input. Please enter Y or N.\n")
+
 
 
 
