@@ -1,6 +1,5 @@
 Instructions
 
-
 These are the menu options: 
 1. (A)dd a Book
 2. (R)emove a Book
@@ -12,7 +11,7 @@ These are the menu options:
 (Q)uit
 
 Alwasy press ENTER after each input.
--------------------
+----------------------
 How to Add a book:
 
 To add a book, choose 1 or A.
@@ -42,12 +41,16 @@ The prompt below will appear:
 After entering the title of the book, press ENTER, and the below prompt will appear afterwards: 
 
     Successfully removed 'book title' from your bookshelf.
-This will make the main menu options appear again.
-----------------------        
+
+The main menu options will appear again at the end.
+----------------------      
 How to update a book
 
 To Update a Book, choose 3 or U.
-To update a book, enter the title of a book. Enter updates in the needed fields. 
+
+Enter the title of a book you want to update. 
+
+Enter updates in the needed fields. 
     This is how it will pop up:
     
         New Author(current: ): Enter new author name
@@ -56,18 +59,78 @@ To update a book, enter the title of a book. Enter updates in the needed fields.
         New Form(current: ): Enter new format of the book(Audiobook, Physical, eBook, etc.) 
         New Status(current: ): Enter new state of completion(Completed, TBR, etc.) 
         New Rating(current: ): New book rating on a scale of 1 to 5(1 = Bad, 5 = Awesome)
-        New Notes(current: ): New comments or reminders about the book"
+        New Notes(current: ): New comments or reminders about the book
 
-If certain fields need to remain the same, 
-    #Other functions include, saving, finding a book in the collection, and display
-    #options.
-    print("Some other functions available is finding a book in your collection,"
-          " saving your collection to most recent updates and displaying the book"
-          " in a CSV or JSON format.\n")
-    print("To Find a Book in your collection, choose 4 or F.\n\tTo find the book,"
-          " enter the title.\n")
-    print("To save your collection to the most recent, choose 5 or S.\n")
-    print("To View your collection, choose 6 or V.\n")
-    print("To export your collection into a CSV file, choose 7 or X.\n")
-    newline()
-    print("To quit the program, press Q.")
+If certain fields don't need to be changed, simply press ENTER and the information will remain unchanged unless an entry is typed.
+Once everything is filled out, press ENTER. This will make the main menu options appear again.     
+----------------------
+How to Find a Book: 
+
+To Find a Book in your collection, choose 4 or F.
+Enter the title of the book you want to find. 
+
+If the book is NOT in your collection, it will show: 
+        Book titled 'Book Title' not found.
+
+If the book is in your collection it will show the book information as: 
+        Author: 
+        ----------------------------------------
+        Genre: 
+        ----------------------------------------
+        Year: 
+        ----------------------------------------
+        Form: 
+        ----------------------------------------
+        Status: 
+        ----------------------------------------
+        Rating: 
+        ----------------------------------------
+        Notes: 
+        ----------------------------------------
+The main menu options will appear again at the end.
+----------------------
+How to Save your Collection:
+To save your collection to the most recent, choose 5 or S.
+This will pop up the prompt: 
+
+        Bookshelf successfully saved to 'books.json'
+
+The main menu options will appear again at the end.
+----------------------
+How to View your Collection: 
+
+To View your collection, choose 6 or V.
+
+It will show all your books in this format:
+        Here is your current Bookshelf:
+        ----------------------------------------
+        Title | Author | Genre | Year | Form | Status | Rating | Notes | 
+        ----------------------------------------
+        Example1 | asdf | asdf | 1234 | physical | asdf | 2 | asdf | 
+        ----------------------------------------
+        Example2 | qwer | qwer | 1234 | ebook | tbr | 3 | na | 
+        ----------------------------------------
+        Example3 | zxcv | zxcv | 1234 | ebook | tbr | 3 | a | 
+        ----------------------------------------
+        End of bookshelf.
+
+The main menu options will appear again at the end.
+----------------------
+How to Export your Collection:
+
+Users can export their collection to a CSV file by choosing 7 or X.
+This will pop up the prompt: 
+        Exporting your Bookshelf...
+        Bookshelf successfully exported to 'bookshelf.csv'.
+
+Find the CSV file in file management, search for bookshelf.csv
+In the CSV file you will find the information about your book containing the Title, Author, Genre, Year, Form, Status, Rating, and Notes.
+----------------------
+How to Quit the program:
+
+To quit the program, press Q in the main menu options.
+This will give you the option to save your collection before you quit, choosing Y(Yes) or N(No).
+Once you choose a selection, you will exit the program.
+----------
+
+The End of Instructions
