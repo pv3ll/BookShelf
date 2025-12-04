@@ -63,10 +63,10 @@ def instructions():
     print("To Find a Book in your collection, choose 4 or F.\n\tTo find the book,"
           " enter the title.\n")
     print("To save your collection to the most recent, choose 5 or S.\n")
-    print("To View your collection, choose 6 or X.\n\tThis will export your"
-          " collection into a JSON file, with an option to view it as a CSV file.")
+    print("To View your collection, choose 6 or V.\n")
+    print("To export your collection into a CSV file, choose 7 or X.\n")
     newline()
-    print("To quit the program, press Q")
+    print("To quit the program, press Q.")
     
 #Introduction to the program
 print("Welcome to the Book Shelf!\n")
@@ -160,5 +160,6 @@ while True:
             break
         else: 
             print("Invalid input. Please enter Y or N.\n")
+
 
 
