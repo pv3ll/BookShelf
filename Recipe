@@ -8,14 +8,14 @@ Import book_data module
   It also includes the quit function
 
 Create user-defined functions to create section dividers, quit option, and instructions 
-  Section divider uses Newline(): print("-" * 40)
+  Section divider uses Newline(): print("-" * 80)
   Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like.
     - 
 
 Third, introduction into the program with a summary of what the program can do. 
 Create a variable to define filename into books.json
-  This is so users can view their bookshelf in json format in the program
-  Export option is so users can export thier bookshelf into csv
+  This is so users can view their BookShelf in json format in the program
+  Export option is so users can export thier bookshelf into csv and view in Excel
 Create a choice input option for users to view the instructions or go straight to the Main Menu
     Use while loop for users choose Y or N
       Y means yes:
@@ -28,9 +28,9 @@ In the main menu, include the options in a while loop:
     "R" and "2" = Remove a book
     "U" and "3" = Update a book
     "F" and "4" = Find a book
-    "S" and "5" = Save your Collection
-    "V" and "6" = View your Collection 
-    "X" and "7" = Export to CSV
+    "S" and "5" = Save your BookShelf
+    "V" and "6" = View your BookShelf 
+    "X" and "7" = Export to CSV and Excel
     "Q" = Quit
     Make sure uppercase and lowercase can both be used as input using strip().lower()
 Create input statement for user to make a selection from the following
@@ -51,11 +51,11 @@ for users to know what the original information was before editing it.
 
 Find a book by recalling its title.
 
-Save the collection to books.json.
+Save the BookShelf to books.json.
 
-View your collection in json format.
+View your BookShelf in json format.
 
-Export your collection to CSV format.
+Export your BookShelf to CSV format and view using Excel.
 
 Create functions using the book_data module in the while loop.
   Use if:elif:else in the same order from line 27 to line 34. 
