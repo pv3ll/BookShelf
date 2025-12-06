@@ -48,20 +48,27 @@ Notes
 
 Remove a book by recalling its title. The inputs "R" and "2" should be used for users to choose remove.
 
-Update a book by recalling its title first, users will be able to edit the above elements(except title) or skip them by pressing "enter" on their keyboard. The current information will be in parantheses
-for users to know what the original information was before editing it.
-  The format should look like this in the output:
-  
-Find a book by recalling its title.
+The option to update should use the inputs "U" and "3". 
+    Update a book by recalling its title first, users will be able to edit the above elements(except title) or skip them by pressing "enter" on their keyboard. The current information will be in parantheses for users to know what the original information was before editing it.
+      The format should look like this in the output:
+            New Author(current: ): 
+            New Genre(current: ): 
+            New Year(current: ): 
+            New Form(current: ): 
+            New Status(current: ): 
+            New Rating(current: ): 
+            New Notes(current: ): 
+Find a book by recalling its title. This option should connect to the inputs "F" and "4"
 
-Save the BookShelf to books.json.
+To save a collection the user has made, use books.json. The option should connect to the inputs "S" and "5". 
 
-View your BookShelf in json format.
+View your BookShelf in json format. Inputs "6" and "V" should be used to choose this option.
 
-Export your BookShelf to CSV format and view using Excel.
+To export the collection into a CSV format, use the book_data module to create a function that exports the json file into a CSV file. The inputs "X" and "7" should be used for this function.
 
 Create functions using the book_data module in the while loop.
   Use if:elif:else in the same order from line 27 to line 34. 
+
 The main menu loop should keep happening unless the user chooses quit.
   
       
