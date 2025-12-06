@@ -5,9 +5,9 @@ These are the menu options:
 2. (R)emove a Book
 3. (U)pdate a Book
 4. (F)ind a Book
-5. (S)ave your Collection
-6. (V)iew your Collection
-7. E(X)port to CSV
+5. (S)ave your BookShelf
+6. (V)iew your BookShelf
+7. E(X)port to CSV and Excel
 (Q)uit
 
 Alwasy press ENTER after each input.
@@ -27,10 +27,10 @@ The below prompt shows what users need to know to add a book. They will pop up i
         Rating: Rate book on a scale of 1 to 5(1 = Bad, 5 = Awesome)
         Notes: Comments or reminders about the book  
 
-You must have the book title filled out at minimum in order to save you collection.
+You must have the book title filled out at minimum in order to save your BookShelf.
 Once everything is filled out, press ENTER. This will make the main menu options appear again.           
 ----------------------
-How to Remove a book:
+How to Remove a Book:
             
 To remove a book, choose 2 or R.
             
@@ -40,11 +40,11 @@ The prompt below will appear:
 
 After entering the title of the book, press ENTER, and the below prompt will appear afterwards: 
 
-    Successfully removed 'book title' from your bookshelf.
+    Successfully removed 'book title' from your BookShelf.
 
 The main menu options will appear again at the end.
 ----------------------      
-How to update a book
+How to Update a Book
 
 To Update a Book, choose 3 or U.
 
@@ -66,40 +66,33 @@ Once everything is filled out, press ENTER. This will make the main menu options
 ----------------------
 How to Find a Book: 
 
-To Find a Book in your collection, choose 4 or F.
+To Find a Book in your BookShelf, choose 4 or F.
 Enter the title of the book you want to find. 
 
-If the book is NOT in your collection, it will show: 
+If the book is NOT in your BookShelf, it will show: 
         Book titled 'Book Title' not found.
 
-If the book is in your collection it will show the book information as: 
-        Author: 
-        ----------------------------------------
-        Genre: 
-        ----------------------------------------
-        Year: 
-        ----------------------------------------
-        Form: 
-        ----------------------------------------
-        Status: 
-        ----------------------------------------
-        Rating: 
-        ----------------------------------------
-        Notes: 
-        ----------------------------------------
+If the book is in your BookShelf, it will show the book information as: 
+
+Book Found
+--------------------------------------------------------------------------------
+Title | Author | Genre | Year | Form | Status | Rating | Notes | 
+--------------------------------------------------------------------------------
+Example 1 | asdf | ghjk | 0000 | qwerty | zxcv |  |  | 
+--------------------------------------------------------------------------------
 The main menu options will appear again at the end.
 ----------------------
-How to Save your Collection:
-To save your collection to the most recent, choose 5 or S.
+How to Save your BookShelf:
+To save your BookShelf to the most recent, choose 5 or S.
 This will pop up the prompt: 
 
         Bookshelf successfully saved to 'books.json'
 
 The main menu options will appear again at the end.
 ----------------------
-How to View your Collection: 
+How to View your BookShelf: 
 
-To View your collection, choose 6 or V.
+To View your BookShelf, choose 6 or V.
 
 It will show all your books in this format:
         Here is your current Bookshelf:
@@ -116,20 +109,20 @@ It will show all your books in this format:
 
 The main menu options will appear again at the end.
 ----------------------
-How to Export your Collection:
+How to Export your BookShelf:
 
-Users can export their collection to a CSV file by choosing 7 or X.
+Users can export their BookShelf to a CSV file and view it in Excel by choosing 7 or X.
 This will pop up the prompt: 
         Exporting your Bookshelf...
-        Bookshelf successfully exported to 'bookshelf.csv'.
+        BookShelf successfully exported to 'bookshelf.csv'.
 
 Find the CSV file in file management, search for bookshelf.csv
-In the CSV file you will find the information about your book containing the Title, Author, Genre, Year, Form, Status, Rating, and Notes.
+In the CSV file, you will find the information about your book, including the Title, Author, Genre, Year, Form, Status, Rating, and Notes.
 ----------------------
-How to Quit the program:
+How to Quit the Program:
 
 To quit the program, press Q in the main menu options.
-This will give you the option to save your collection before you quit, choosing Y(Yes) or N(No).
+This will give you the option to save your BookShelf before you quit, choosing Y(Yes) or N(No).
 Once you choose a selection, you will exit the program.
 ----------
 
