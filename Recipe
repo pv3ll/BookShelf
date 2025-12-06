@@ -3,72 +3,60 @@ Bookshelf
 6050 Group Project
 Contributors: Madison Goulet, Pearl Vang, and Saja Noor
 
-Import book_data module
-  book_data module is used for add, remove, update, and find option
-  It also includes the quit function
+Import book_data module. The book_data module is used for the main menu options, including the quit function.
+Create user-defined functions to create section dividers and instructions.
+	Section divider uses Newline(): print("-" * 80)
+	Instructions use instructions() and returns a description about the main options the program provides, how to use them, and how they will look like.
 
-Create user-defined functions to create section dividers, quit option, and instructions 
-  Section divider uses Newline(): print("-" * 80)
-  Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like.
-
-
-Third, introduction into the program with a summary of what the program can do. 
+Introduction into the program with a summary of what the program can do. 
 Create a variable to define filename into books.json
-  This is so users can view their BookShelf in json format in the program
-  Export option is so users can export thier bookshelf into csv and view in Excel
+	This is so users can view their Bookshelf in JSON format in the program
+	Export option is so users can export their bookshelf into csv and view in Excel
 Create a choice input option for users to view the instructions or go straight to the Main Menu
-    Use while loop for users choose Y or N
-      Y means yes:
-        Y should print the user function "instructions" 
-      N means no: 
-        Use pass for loop to continue to Main menu options
+	Use while loop for users choose Y or N
+		Y means yes:
+			Y should print the user function "instructions" 
+		N means no: 
+			Use pass for loop to continue to Main menu options
 In the main menu, include the options in a while loop:
-    Options should be: Add, Remove, Update, Find, Save, View, Export, and Quit
-    "A" and "1" = Add a book
-    "R" and "2" = Remove a book
-    "U" and "3" = Update a book
-    "F" and "4" = Find a book
-    "S" and "5" = Save your BookShelf
-    "V" and "6" = View your BookShelf 
-    "X" and "7" = Export to CSV and Excel
-    "Q" = Quit
-    Make sure uppercase and lowercase can both be used as input using strip().lower()
-Create input statement for user to make a selection from the following
-
+	Options should be: Add, Remove, Update, Find, Save, View, Export, and Quit
+		"A" and "1" = Add a book
+		"R" and "2" = Remove a book
+		"U" and "3" = Update a book
+		"F" and "4" = Find a book
+		"S" and "5" = Save your BookShelf
+		"V" and "6" = View your BookShelf 
+		"X" and "7" = Export to CSV and Excel
+		"Q" = Quit
+Make sure uppercase and lowercase can both be used as input using strip().lower()
+Create input statement for users to make a selection from the Main Menu options shown above. 
 To add a book, the inputs "A" and "1" should connect to Add for users. 
 Adding a book should include these elements: 
-Title
-Author
-Genre
-Year
-Form
-Status
-Rating
-Notes
-
-Remove a book by recalling its title. The inputs "R" and "2" should be used for users to choose remove.
-
-The option to update should use the inputs "U" and "3". 
-    Update a book by recalling its title first, users will be able to edit the above elements(except title) or skip them by pressing "enter" on their keyboard. The current information will be in parantheses for users to know what the original information was before editing it.
+	Title
+	Author
+	Genre
+	Year
+	Form
+	Status
+	Rating
+	Notes
+Remove a book by recalling its title. The inputs "R" and "2" should be used for users to choose to remove.
+The option to update should use the inputs "U" and "3". Update a book by recalling its title first, users will be able to edit the above elements (except title) or skip them by pressing "enter" on their keyboard. The current information will be in parentheses for users to know what the original information was before editing it.
       The format should look like this in the output:
-            New Author(current: ): 
-            New Genre(current: ): 
-            New Year(current: ): 
-            New Form(current: ): 
-            New Status(current: ): 
-            New Rating(current: ): 
-            New Notes(current: ): 
-Find a book by recalling its title. This option should connect to the inputs "F" and "4"
-
+			New Author (current: ): 
+			New Genre (current: ): 
+			New Year (current: ): 
+			New Form (current: ): 
+			New Status (current: ): 
+			New Rating (current: ): 
+			New Notes (current: ): 
+Find a book by recalling its title. This option should connect to the inputs "F" and "4".
 To save a collection the user has made, use books.json. The option should connect to the inputs "S" and "5". 
 
-View your BookShelf in json format. Inputs "6" and "V" should be used to choose this option.
+Users should be able to view their collection in JSON format. Inputs "6" and "V" should be used to choose this option.
+To export the collection into a CSV format, the inputs "X" and "7" should be used for this function.
+Create functions using the book_data module in a while loop. Use if:elif:else in the same order from line 27 to line 34. 
+The main menu loop should keep happening unless the user chooses to quit.
 
-To export the collection into a CSV format, use the book_data module to create a function that exports the json file into a CSV file. The inputs "X" and "7" should be used for this function.
-
-Create functions using the book_data module in the while loop.
-  Use if:elif:else in the same order from line 27 to line 34. 
-
-The main menu loop should keep happening unless the user chooses quit.
   
       
