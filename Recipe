@@ -10,7 +10,7 @@ Import book_data module
 Create user-defined functions to create section dividers, quit option, and instructions 
   Section divider uses Newline(): print("-" * 80)
   Instructions uses instructions() and returns a description about the main options the program provides, how to use them, and how they will look like.
-    - 
+
 
 Third, introduction into the program with a summary of what the program can do. 
 Create a variable to define filename into books.json
@@ -34,6 +34,8 @@ In the main menu, include the options in a while loop:
     "Q" = Quit
     Make sure uppercase and lowercase can both be used as input using strip().lower()
 Create input statement for user to make a selection from the following
+
+To add a book, the inputs "A" and "1" should connect to Add for users. 
 Adding a book should include these elements: 
 Title
 Author
@@ -44,11 +46,12 @@ Status
 Rating
 Notes
 
-Remove a book by recalling its title.
+Remove a book by recalling its title. The inputs "R" and "2" should be used for users to choose remove.
 
 Update a book by recalling its title first, users will be able to edit the above elements(except title) or skip them by pressing "enter" on their keyboard. The current information will be in parantheses
 for users to know what the original information was before editing it.
-
+  The format should look like this in the output:
+  
 Find a book by recalling its title.
 
 Save the BookShelf to books.json.
