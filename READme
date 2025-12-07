@@ -1,4 +1,4 @@
-Instructions
+User Instructions
 
 These are the menu options: 
 1. (A)dd a Book
@@ -48,7 +48,7 @@ How to Update a Book
 
 To Update a Book, choose 3 or U.
 
-Enter the title of a book you want to update. 
+Enter the title of a book you would like to update. 
 
 Enter updates in the needed fields. 
     This is how it will pop up:
@@ -67,7 +67,7 @@ Once everything is filled out, press ENTER. This will make the main menu options
 How to Find a Book: 
 
 To Find a Book in your BookShelf, choose 4 or F.
-Enter the title of the book you want to find. 
+Enter the title of the book you would like to find. 
 
 If the book is NOT in your BookShelf, it will show: 
         Book titled 'Book Title' not found.
@@ -126,4 +126,4 @@ This will give you the option to save your BookShelf before you quit, choosing Y
 Once you choose a selection, you will exit the program.
 ----------
 
-The End of Instructions
+The End of User Instructions
